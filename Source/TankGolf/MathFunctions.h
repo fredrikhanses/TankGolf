@@ -20,4 +20,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category="Math")
 	static void ABCFormula(float A, float B, float C, float& X1, float& X2);
+
+	UFUNCTION(BlueprintCallable, Category="Math")
+	static void ReflectGolfBall(FVector VelocityOnHit, FVector HitNormal, float BounceScale, FVector& NewVelocity);
 };

@@ -34,3 +34,8 @@ void UMathFunctions::ABCFormula(float A, float B, float C, float& X1, float& X2)
 	X1 = firstPart + secondPart;
 	X2 = firstPart - secondPart;
 }
+
+void UMathFunctions::ReflectGolfBall(FVector VelocityOnHit, FVector HitNormal, float BounceScale, FVector& NewVelocity)
+{
+	NewVelocity = (VelocityOnHit - 2 * FVector::DotProduct(VelocityOnHit, HitNormal) * HitNormal) * BounceScale;
+}
